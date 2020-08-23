@@ -6,7 +6,7 @@ import World from '../../World/World';
 const ReactRogue = ({ width, height, tileSize}) => {
     const canvasRef = useRef();
     const [player, setPlayer] = useState(new Player(1, 2, tileSize));
-    const [world, serWorld] = useState(new World(width, height, tileSize));
+    const [world, setWorld] = useState(new World(width, height, tileSize));
     let inputManager = new InputManager();
 
     const handleInput = (action, data) => {
